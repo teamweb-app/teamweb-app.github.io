@@ -1,3 +1,438 @@
 * {
   box-sizing: border-box;
 }
+
+/*================================== animation================== */
+
+.w3-animate-zoom {
+  -webkit-animation: animatezoom .6s;
+  animation: animatezoom .6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+/* ===============animation ends=============================== */
+p {
+  color: rgb(53, 49, 49);
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/********** nav styling starts************** */
+body nav {
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  background-color: white;
+}
+
+body nav div.logo {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+body nav div.logo img {
+  height: 26px;
+  width: 126px;
+}
+
+body nav div.nav-text-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body nav a.nav-link {
+  text-decoration: none;
+  color: black;
+  transition-delay: .1s;
+}
+
+body nav a.nav-link:hover {
+  color: blue;
+}
+
+/**************** nav styling ends************ */
+/***************** banner styling******* ******/
+body div.banner {
+  height: 760px;
+  display: flex;
+}
+
+body div.banner .left-banner {
+  background-color: blue;
+  height: 100%;
+  width: 40%;
+}
+
+body div.banner .right-banner {
+  background-color: lightsteelblue;
+  width: 60%;
+}
+
+/* banner styling done */
+
+/********* services styling start**** */
+body div.services {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  height: 174px;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  box-shadow: 2px 2px 10px rgb(187, 182, 182);
+}
+
+body div.services .each-card {
+  border-right-style: solid;
+  border-width: thin;
+  border-color: gainsboro;
+  text-align: center;
+  width: 33%;
+}
+
+body div.services .each-card i {
+  /* display: block; */
+  font-size: 30px;
+}
+
+/* service styling done */
+
+/*=============================== display flowers =======================*/
+body div.display-flowers {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+body div.display-flowers .display-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 3;
+}
+
+body div.display-flowers .display-container .display-section,
+body div.display-flowers .display-container .display-section-down {
+  width: 100%;
+}
+
+body div.display-flowers .display-container .display-section .each-flower-section,
+body div.display-flowers .display-container .display-section-down .each-flower-section {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  background-color: lightsteelblue;
+}
+
+.display-container .display-section-down,
+body div.display-flowers .display-container .display-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* body div.display-flowers .each-flower-section {
+  border-style: dotted;
+} */
+
+body div.display-flowers img {
+  width: 200px;
+  filter: brightness(50%);
+}
+
+body div.display-flowers .right {
+  background-color: lightsteelblue;
+  margin-bottom: 2em;
+
+}
+
+body div.display-flowers .right img {
+  width: 200px;
+  height: 400px;
+}
+
+/* =========== display flowers done ============= */
+/* ========== Latest Product =================== */
+body div.latest-product {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* padding-left: 1em; */
+  padding-left: 4em;
+}
+
+body div.latest-product>h2 {
+  padding-left: .8em;
+  margin-top: 0;
+}
+
+body div.latest-product>p {
+  padding-left: .8em;
+}
+
+body div.latest-product>h2 span {
+  display: inline-block;
+  border-bottom-style: solid;
+  border-color: blue;
+  border-width: medium;
+}
+
+body div.latest-product .each-product-category {
+  /* width: 300px; */
+  /* margin: 2em; */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+body div.latest-product .each-product-category .each-product {
+  padding: 0;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+body div.latest-product .each-product-category .each-product figure img {
+  width: 250px;
+  height: 250px;
+  background-color: rgb(26, 18, 18);
+  filter: brightness(90%);
+  position: relative;
+}
+
+body div.latest-product .each-product-category .each-product figure {
+  height: 350px;
+  padding: 0;
+  margin: 0;
+  transition-duration: .4s;
+}
+
+body div.latest-product .each-product-category .each-product:hover span {
+  display: flex;
+  transition-duration: .4s;
+}
+
+body div.latest-product .each-product-category .each-product:hover figure figcaption {
+  position: relative;
+  bottom: 250px;
+}
+
+body div.latest-product .each-product-category .each-product figure span {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 250px;
+  bottom: 255px;
+  text-align: center;
+  padding: 1em;
+  opacity: .8;
+  filter: brightness(300%);
+  background-color: black;
+  transition-duration: 2s;
+  margin: 0;
+}
+
+body div.latest-product .each-product-category .each-product figure span a {
+  display: block;
+  padding: 1em;
+  margin: .5em;
+  background-color: blue;
+  color: white;
+  font-weight: bolder;
+  transition-duration: .4s;
+}
+
+body div.latest-product .each-product-category .each-product figure span:hover {
+  opacity: .8;
+}
+
+body div.latest-product .each-product-category .each-product figure a:hover {
+  cursor: pointer;
+  background-color: white;
+  color: blue;
+
+}
+
+/* =======latest product ends============= */
+/* ==============newsletter starts =========== */
+body div.newsletter {
+  height: 300px;
+  background-color: whitesmoke;
+  display: flex;
+}
+
+body div.newsletter .main-receive-newsletter {
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+  border-style: inset;
+  border-width: thin;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgb(145, 139, 139);
+}
+
+body div.newsletter .main-receive-newsletter .form-field {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+
+}
+
+body div.newsletter .form-field input[type='email'] {
+  display: inline-block;
+  border: none;
+  border-style: inset;
+  border-radius: 20px;
+  border-width: thin;
+  outline: none;
+  background-color: whitesmoke;
+  margin: 1em;
+  width: 400px;
+  padding: 1em;
+}
+
+body div.newsletter .form-field input[type='submit'] {
+  display: inline-block;
+  border: none;
+  border-style: solid;
+  border-color: whitesmoke;
+  border-width: medium;
+  width: 150px;
+  padding: 1em;
+  border-radius: 20px;
+  background-color: blue;
+  color: whitesmoke;
+  transition-duration: .4s;
+  outline: none;
+}
+
+body div.newsletter .form-field input[type='submit']:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: blue;
+  border-color: blue;
+}
+
+/* ==========newsletter ends ==============*/
+/* =============footer starts ============= */
+body footer {
+  height: 400px;
+  background-color: lightsteelblue;
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+}
+
+body footer p {
+  color: rgb(53, 49, 49);
+}
+
+body footer .about {
+  padding-left: 2em;
+  padding-right: 2em;
+  flex: 30%;
+}
+
+body footer .quick-links {
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 20%;
+}
+
+
+
+
+body footer .quick-links a {
+  text-decoration: none;
+  color: rgb(53, 49, 49);
+  transition-duration: 0.4s;
+  /* margin-top: .5em; */
+}
+
+body footer .quick-links a:hover {
+  color: blue;
+}
+
+body footer .gallery {
+  flex: 30%;
+}
+
+body footer .gallery h3 {
+  padding-left: 0.8em;
+}
+
+body footer .gallery .gallery-img-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0;
+  /* justify-content: space-around; */
+  /* align-content: center; */
+}
+
+body footer .gallery .each-gallery-item {
+  width: 100px;
+  height: 100px;
+  padding: .3em;
+  background-color: whitesmoke;
+  margin: 0 1em 1em;
+}
+
+body footer .gallery .each-gallery-item img {
+  width: 100%;
+  height: 100%;
+}
+
+footer .follow-us {
+  flex: 20%;
+  padding-left: 1.5em;
+}
+
+footer .follow-us a {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 1em;
+  color: black;
+  transition-duration: 0.4s;
+}
+
+footer .follow-us a:hover {
+  color: blue;
+}
