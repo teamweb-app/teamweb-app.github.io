@@ -1,3 +1,5 @@
+@import "mobile 800.css"screen and (max-width:800px);
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +10,7 @@
   -webkit-animation: animatezoom .6s;
   animation: animatezoom .6s;
 }
+
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0);
@@ -17,6 +20,7 @@
     -webkit-transform: scale(1);
   }
 }
+
 @keyframes animatezoom {
   from {
     transform: scale(0);
@@ -203,16 +207,16 @@ body div.latest-product {
   padding-left: 4em;
 }
 
-body div.latest-product > h2 {
+body div.latest-product>h2 {
   padding-left: .8em;
   margin-top: 0;
 }
 
-body div.latest-product > p {
+body div.latest-product>p {
   padding-left: .8em;
 }
 
-body div.latest-product > h2 span {
+body div.latest-product>h2 span {
   display: inline-block;
   border-bottom-style: solid;
   border-color: blue;
