@@ -8,7 +8,6 @@
   -webkit-animation: animatezoom .6s;
   animation: animatezoom .6s;
 }
-
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0);
@@ -18,7 +17,6 @@
     -webkit-transform: scale(1);
   }
 }
-
 @keyframes animatezoom {
   from {
     transform: scale(0);
@@ -29,12 +27,10 @@
   }
 }
 
-
 /* ===============animation ends=============================== */
 p {
   color: rgb(53, 49, 49);
 }
-
 
 body {
   padding: 0;
@@ -44,9 +40,13 @@ body {
 /********** nav styling starts************** */
 body nav {
   display: flex;
+  width: 100%;
   height: 90px;
   justify-content: space-between;
   background-color: white;
+  z-index: 100000;
+  /* margin-bottom: 1em; */
+  position: fixed;
 }
 
 body nav div.logo {
@@ -78,22 +78,33 @@ body nav a.nav-link:hover {
   color: blue;
 }
 
+body nav .each-nav-link form input[type='search'] {
+  border-style: solid;
+  border-color: blue;
+  border-radius: 10px;
+  padding: 1em;
+  outline: none;
+}
+
 /**************** nav styling ends************ */
 /***************** banner styling******* ******/
 body div.banner {
   height: 760px;
   display: flex;
+  margin-top: 0;
 }
 
 body div.banner .left-banner {
   background-color: blue;
   height: 100%;
   width: 40%;
+  margin: 0;
 }
 
 body div.banner .right-banner {
   background-color: lightsteelblue;
   width: 60%;
+  margin: 0;
 }
 
 /* banner styling done */
@@ -192,16 +203,16 @@ body div.latest-product {
   padding-left: 4em;
 }
 
-body div.latest-product>h2 {
+body div.latest-product > h2 {
   padding-left: .8em;
   margin-top: 0;
 }
 
-body div.latest-product>p {
+body div.latest-product > p {
   padding-left: .8em;
 }
 
-body div.latest-product>h2 span {
+body div.latest-product > h2 span {
   display: inline-block;
   border-bottom-style: solid;
   border-color: blue;
@@ -376,13 +387,10 @@ body footer .quick-links {
   flex: 20%;
 }
 
-
-
-
 body footer .quick-links a {
   text-decoration: none;
   color: rgb(53, 49, 49);
-  transition-duration: 0.4s;
+  transition-duration: .4s;
   /* margin-top: .5em; */
 }
 
@@ -395,7 +403,7 @@ body footer .gallery {
 }
 
 body footer .gallery h3 {
-  padding-left: 0.8em;
+  padding-left: .8em;
 }
 
 body footer .gallery .gallery-img-container {
@@ -430,7 +438,7 @@ footer .follow-us a {
   font-size: 20px;
   margin-right: 1em;
   color: black;
-  transition-duration: 0.4s;
+  transition-duration: .4s;
 }
 
 footer .follow-us a:hover {
