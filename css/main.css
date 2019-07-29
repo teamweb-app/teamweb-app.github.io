@@ -94,24 +94,69 @@ body nav .each-nav-link form input[type='search'] {
 /***************** banner styling******* ******/
 body div.banner {
   height: 760px;
-  display: flex;
-  margin-top: 0;
+  position: relative;
 }
 
-body div.banner .left-banner {
+body div.banner .banner-bg {
+  display: flex;
+  margin-top: 0;
+  height: 100%;
+}
+
+body div.banner .banner-bg .left-banner {
   background-color: blue;
   height: 100%;
   width: 40%;
   margin: 0;
 }
 
-body div.banner .right-banner {
+body div.banner .banner-bg .right-banner {
   background-color: lightsteelblue;
   width: 60%;
   margin: 0;
 }
 
-/* banner styling done */
+body div.banner-image-text {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  /* justify-content: center */
+}
+
+body div.banner-image-text .banner-text {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 1em;
+  padding-right: 12em;
+  padding-left: 3em;
+  line-height: 30px;
+}
+
+body div.banner-image-text .banner-text h2 {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: #555555;
+  margin-bottom: 12px;
+
+}
+
+body div.banner-image-text .banner-text h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+body div.banner-image-text img {
+  width: 600px;
+  height: 600px;
+}
+
+/*=============== banner styling done============== */
 
 /********* services styling start**** */
 body div.services {
